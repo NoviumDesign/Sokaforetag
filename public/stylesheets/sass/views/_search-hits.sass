@@ -1,0 +1,59 @@
+.search-criteria-container
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(4)
+
+.search-criterias
+  margin-bottom: 20px
+
+.search-header, .search-subheader
+  border-bottom: 1px solid $base-font-color
+  margin-bottom: 20px
+  padding-bottom: 5px
+
+.search-hits-container
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(8)
+
+.search-subheader
+  font-weight: 400
+  +span-columns(8 of 8)
+
+  +media($medium-screen)
+    +span-columns(3 of 8)
+
+.search-hit
+  +row
+  background-color: $accent-background-color
+  color: $base-font-color
+  margin-bottom: 20px
+
+  &:hover
+    color: $base-font-color
+    background-color: lighten($accent-background-color, 2)
+
+.search-hit-header-container
+  +row
+  background-color: $orange
+  padding: 10px 20px
+  color: #FFF
+
+.search-hit-content
+  +row
+  padding: 20px 20px 0px 20px
+
+  a
+    color: $base-font-color
+    text-decoration: underline
+
+.search-hit-information
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(6)
+
+.selected
+  text-decoration: underline

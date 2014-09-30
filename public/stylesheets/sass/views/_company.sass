@@ -1,0 +1,69 @@
+.company-information
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(8)
+    +shift(2)
+
+.company-name
+  text-align: center
+
+.company-location, .company-map
+  margin: 20px 0
+
+.company-location
+  text-align: center
+  +span-columns(12)
+
+  +media($medium-screen)
+    text-align: left
+    +span-columns(4)
+    +shift(2)
+
+  +media($large-screen)
+    +span-columns(3)
+    +shift(3)
+
+.company-map
+  display: none
+
+  +media($medium-screen)
+    display: block
+    +span-columns(4)
+
+  +media($large-screen)
+    +span-columns(3)
+
+.location-icon
+  margin-left: 0
+  left: 0
+  position: relative
+  width: 48px
+
+  +media($medium-screen)
+    margin-left: 50%
+    left: -24px
+
+.information-row
+  margin-bottom: 20px
+
+.company-information-list
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(6)
+
+.canvas-container
+  +span-columns(12)
+
+  canvas
+    margin-top: 10px
+
+.economicHistory-legend li span
+  width: 1em
+  height: 1em
+  display: inline-block
+  margin-right: 5px
+
+.economicHistory-legend
+  list-style: none

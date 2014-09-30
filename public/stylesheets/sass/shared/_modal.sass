@@ -1,0 +1,129 @@
+.modal
+  $modal-padding: 1em
+  $modal-background: $base-background-color
+  $modal-close-color: #FFF
+  $modal-image-height: 135px
+  $modal-image-width: $modal-image-height
+
+  label
+    cursor: pointer
+    margin-bottom: 0
+
+  label img
+    $img-width: 300px
+    border-radius: $img-width / 2
+    display: block
+    max-width: $img-width
+
+  input[type="checkbox"]
+    display: none
+
+  .modal-open
+    overflow: hidden
+
+  .modal-window
+    // overlay
+    +transition(opacity 0.25s ease)
+    +position(fixed, 0px 0px 0px 0px)
+    background: rgba(0, 0, 0, 0.85)
+    opacity: 0
+    text-align: left
+    visibility: hidden
+    z-index: 99999999999
+
+    .modal-bg
+      +position(absolute, 0px 0px 0px 0px)
+      cursor: pointer
+
+  .modal-close
+    position: absolute
+    top: 20px
+    right: 20px
+    +size(1.5em)
+    cursor: pointer
+    background: $orange
+
+    &:after,
+    &:before
+      +position(absolute, 3px 3px 0 50%)
+      +transform(rotate(45deg))
+      +size(0.15em 1.5em)
+      background: $modal-close-color
+      content: ''
+      display: block
+      margin: -3px 0 0 -1px
+
+    &:hover:after,
+    &:hover:before
+      background: darken($modal-close-color, 10)
+
+    &:before
+      +transform(rotate(-45deg))
+
+  .modal-inner
+    +transition(opacity 0.25s ease)
+    border-radius: $base-border-radius
+    background: $modal-background
+    margin: auto
+    max-height: 95%
+    position: relative
+    overflow: auto
+    width: 95%
+    margin-top: .6em
+
+    +media($medium-screen)
+      width: 70%
+
+    +media($large-screen)
+      width: 50%
+
+    h2
+      background-color: $orange
+      color: #FFF
+      padding: 10px 20px
+      margin-bottom: .6em
+      text-align: left
+
+    p
+      font-size: $base-font-size
+      max-width: 100% !important
+      padding: 0
+      text-align: left
+
+    .modal-row
+      +row
+      margin-bottom: 20px
+
+    a.cta
+      color: white
+      display: inline-block
+      margin-right: .5em
+      margin-top: 1em
+
+      &:last-child
+        padding: 0 2em
+
+  .modal-state:checked + .modal-window
+    opacity: 1
+    visibility: visible
+
+  .modal-state:checked + .modal-window .modal-inner
+    top: 0
+
+  .modal-content
+    padding: 0 20px
+
+.modal-dropdown
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(9)
+
+  +media($large-screen)
+    +span-columns(7)
+
+.modal-form
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(6)

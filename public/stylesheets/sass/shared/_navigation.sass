@@ -1,0 +1,68 @@
+$navigation-height: 50px
+$navigation-padding: 20px
+
+.navigation, .sub-navigation
+  height: $navigation-height
+  color: $light-gray 
+  padding: 0 $navigation-padding
+
+.navigation
+  background-color: $dark-gray
+
+.sub-navigation
+  background-color: $orange
+
+.logo-container
+  float: left
+
+.logo
+  color: $light-gray
+  font-size: 1.5em
+  font-weight: 500
+  line-height: $navigation-height
+
+  &:hover
+    color: lighten($light-gray, 15)
+
+.login-container
+  float: right
+
+.login-button
+  display: inline-block
+  line-height: $navigation-height
+
+.login-logo
+  float: left
+  width: 22px
+  margin-right: 10px
+  margin-top: 12px
+
+.sub-navigation-search-bar
+  line-height: $navigation-height
+  +span-columns(12)
+
+  +media($large-screen)
+    +span-columns(4)
+
+.search-history-container
+  +fill-parent
+  display: none
+
+  +media($large-screen)
+    display: block
+
+.search-history
+  opacity: 0.75
+  line-height: $navigation-height
+  float: right
+
+  li
+    color: #FFF
+    float: left
+    margin-left: 5px
+
+    a
+      color: #FFF
+
+      &:hover
+        color: darken(#FFF, 15)

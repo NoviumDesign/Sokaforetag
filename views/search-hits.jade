@@ -1,0 +1,112 @@
+extends templates/layout
+block vars
+  - var bodyClass = 'search-hits'
+block content
+  include partials/_navigation
+  include partials/_sub-navigation
+  .container
+    .search-criteria-container
+      a.js-accordion-trigger.hide-for-large-up(href="javascript:void(0)")
+        h5 Visa sökkriterier
+        img.arrow(src="/public/icons/arrow.svg")
+      h4.search-header.show-for-large-up Sökkriterier
+      section.accordion-content.show-for-large-up
+        section.search-criterias
+          h6 Län
+          ul
+            li
+              a(href="#") Stockholm (9)
+            li
+              a(href="#") Västra Götaland (1)
+            li
+              a(href="#") Östergötland (1)
+        section.search-criterias
+          h6 Bransch
+          ul
+            li
+              a(href="#") Fiskeri (6)
+            li
+              a(href="#") Dataprogrammering (4)
+            li
+              a(href="#") Bilverkstad (1)
+        section.search-criterias
+          h6 Omsättning (t.kr.)
+          ul
+            li
+              a(href="#") > 50 000 (3)
+            li
+              a(href="#") 50 000 - 99 999 (1)
+            li
+              a(href="#") 2 500 000 - 2 999 999 (1)
+        section.search-criterias
+          h6 Bolagsform
+          ul
+            li
+              a.selected(href="#") Aktiebolag (3)
+            li
+              a(href="#") Enskilda firmor (1)
+
+    .search-hits-container
+      .row
+        h4.search-header Sökresultat
+        h6.search-subheader Beslutsfattare (1 träff)
+      a(href="#").search-hit
+        .search-hit-header-container
+          h6 
+            img.icon(src="/public/icons/person.svg")
+            | Ragnar Spoti Joelsson
+        .search-hit-content
+          .search-hit-information
+            ul.phone
+              li Logga in för att se
+            ul.mail
+              li Logga in för att se
+          .search-hit-information
+            ul.moreinfo
+              li Spotify AB (1122-334455)
+            ul.adress
+              li Luntmakargatan 11
+              li 123 45 Stockholm
+              li Stockholms Län
+
+      .row
+        h6.search-subheader Företag (2 träffar)
+      a(href="#").search-hit
+        .search-hit-header-container
+          h6 
+            img.icon(src="/public/icons/company.svg")
+            | Spot i Malmö AB
+        .search-hit-content
+          .search-hit-information
+            ul.phone
+              li 040-12 43 31
+            ul.adress
+              li Stora Nygatan 33
+              li 567 89 Malmö
+              li Skåne Län
+          .search-hit-information
+            ul.moreinfo
+              li Org. nr: 1122-334455
+              li Bransch: Restaurangverksamhet
+              li Antal anställda: 9
+              li Omsättning: 50 000 - 99 999 t.kr.
+
+      a(href="#").search-hit
+        .search-hit-header-container
+          h6 
+            img.icon(src="/public/icons/company.svg")
+            | Spotify AB
+        .search-hit-content
+          .search-hit-information
+            ul.phone
+              li 08-500 014 19
+            ul.adress
+              li Humlegårdsgatan 32
+              li 123 45 Stockholm
+              li Stockholms Län
+          .search-hit-information
+            ul.moreinfo
+              li Org. nr: 1122-334455
+              li Bransch: Webbportaler
+              li Antal anställda: 317
+              li Omsättning: 2 500 00 - 2 999 999 t.kr.
