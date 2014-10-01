@@ -64,6 +64,10 @@ block content
                 li Omsättning:  2 995 697 t.kr.
               ul.list
                 li Ägarförhållande: Privat, ej börsnoterat
+              ul.list
+                li Resultat efter finansnetto: -462 595 t.kr.
+                li Årets resultat: -444 822 t.kr.
+                li Summa tillgångar: 2 420 618 t.kr.
             .company-information-list
               ul.list
                 li Status: Bolaget är aktivt
@@ -77,17 +81,6 @@ block content
               ul.list
                 li Länssäte: Stockholms Län
                 li Kommunsäte: Stockholm
-          .row
-            .company-information-list
-              ul.list
-                li Resultat efter finansnetto: -462 595 t.kr.
-                li Årets resultat: -444 822 t.kr.
-                li Summa tillgångar: 2 420 618 t.kr.
-            .company-information-list
-              ul.list
-                li Resultat: -14,93%
-                li Kassalikviditet: 149,72%
-                li Soliditet:  46,89%
           .row
             h6 Ekonomisk data över 5 år
             | Värden visas i procent.
@@ -111,45 +104,46 @@ block content
             .modal
               label(for='modal-1')
                 .button.js-btn.right Beställ
-                input#modal-1.modal-state(type='checkbox')
-                .modal-window
-                  .modal-inner
-                    label.modal-close(for='modal-1')
-                    h2 Beställ kreditupplysning och årsredovisning
-                    .modal-content
-                      .modal-row
-                        table
-                          tr
-                            th Valda objekt
-                            th Pris
-                          tr
-                            td Kreditupplysning
-                            td 29kr
-                          tr
-                            td Årsbokslut
-                            td 49kr
-                      .modal-row
-                        .modal-dropdown
-                          label(for='select_element1') Vilket år vill du ha årsbokslut för?
-                            select.right(name='select_element1')
-                              option(value="1") Alternativ 1
-                              option(value="2") Alternativ 2
-                              option(value="3") Alternativ 3
-                      .modal-row
-                        h6.header
-                        .row
-                          .modal-form
-                            label(for="text-field1") Namn
-                            input(type="text" id="text_field1")
-                          .modal-form
-                            label(for="text-field1") E-post
-                            input(type="text" id="text_field1")
-                        .row
-                          .modal-form
-                            label(for="text-field1") Företag
-                            input(type="text" id="text_field1")
-                          .modal-form
-                            label(for="text-field1") Org. nr.
-                            input(type="text" id="text_field1")
-                      .modal-row
+              input#modal-1.modal-state(type='checkbox')
+              .modal-window
+                .modal-inner
+                  label.modal-close(for='modal-1')
+                  h2 Beställ kreditupplysning och årsredovisning
+                  .modal-content
+                    .modal-row
+                      table
+                        tr
+                          th Valda objekt
+                          th Pris
+                        tr
+                          td Kreditupplysning
+                          td 29kr
+                        tr
+                          td Årsbokslut
+                          td 49kr
+                    .modal-row
+                      .modal-dropdown
+                        label(for='select_element1') Vilket år vill du ha årsbokslut för?
+                          select.right(name='select_element1')
+                            option(value="1") Alternativ 1
+                            option(value="2") Alternativ 2
+                            option(value="3") Alternativ 3
+                    .modal-row
+                      h6.header
+                      .row
+                        .modal-form
+                          label(for="text-field1") Namn
+                          input(type="text" id="text_field1")
+                        .modal-form
+                          label(for="text-field1") E-post
+                          input(type="text" id="text_field1")
+                      .row
+                        .modal-form
+                          label(for="text-field1") Företag
+                          input(type="text" id="text_field1")
+                        .modal-form
+                          label(for="text-field1") Org. nr.
+                          input(type="text" id="text_field1")
+                    .modal-row
+                      label(for='modal-1')
                         .button.right(for='modal-1') Beställ

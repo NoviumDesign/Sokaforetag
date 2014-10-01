@@ -1,16 +1,32 @@
 .search-criteria-container
+  margin-bottom: 20px
   +span-columns(12)
 
   +media($large-screen)
+    margin-bottom: 0
     +span-columns(4)
+
+.search-criteria-content
+  +media($large-screen)
+    padding: 0
+    background-color: #FFF
 
 .search-criterias
   margin-bottom: 20px
+
+  a
+    color: $base-font-color
+
+  .selected
+    color: $orange
 
 .search-header, .search-subheader
   border-bottom: 1px solid $base-font-color
   margin-bottom: 20px
   padding-bottom: 5px
+
+.search-subheader
+  margin-bottom: 15px
 
 .search-hits-container
   +span-columns(12)
@@ -54,6 +70,3 @@
 
   +media($medium-screen)
     +span-columns(6)
-
-.selected
-  text-decoration: underline

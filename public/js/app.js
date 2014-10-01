@@ -1,3 +1,14 @@
+/* *** Accordiom *** */
+
+$(document).ready(function(){
+  $(".js-accordion-trigger").click(function(){
+    jQuery(this).toggleClass('content-is-expanded');
+    jQuery(this).parent().find(".accordion-content").toggleClass("show-accordion");
+  });  
+});
+
+/* *** Accordion End *** */
+
 /* *** Charts *** */
 
 var economicHistoryData = {
@@ -42,14 +53,3 @@ var economicHistory_ctx = $("#economicHistory").get(0).getContext("2d");
 new Chart(economicHistory_ctx).Line(economicHistoryData, economicHistoryOptions);
 
 /* *** Charts End *** */ 
-
-/* *** Accordiom *** */
-
-$(document).ready(function(){
-  $(".js-accordion-trigger").click(function(){
-    jQuery(this).toggleClass('content-is-expanded');
-    jQuery(this).parent().find(".accordion-content").toggleClass("show-accordion");
-  });  
-});
-
-/* *** Accordion End *** */
