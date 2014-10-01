@@ -1,3 +1,7 @@
+$revenue-color: #16A085
+$result-color: #2ECC71
+$employees-color: #F38034
+
 .company-information
   +span-columns(12)
 
@@ -67,3 +71,20 @@
 
 .economicHistory-legend
   list-style: none
+
+.revenue-icon, .profit-icon, .employees-icon
+  height: 13px
+  width: 13px
+  display: inline-block
+  margin-left: 20px
+  margin-right: 5px
+  margin-top: -7px
+
+.revenue-icon
+  background-color: $revenue-color
+
+.profit-icon
+  background-color: $result-color
+
+.employees-icon
+  background-color: $employees-color
