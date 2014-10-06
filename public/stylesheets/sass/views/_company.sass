@@ -1,6 +1,7 @@
-$revenue-color: #16A085
+$revenue-color: #3498db
 $result-color: #2ECC71
 $employees-color: #F38034
+$average-result-color: #f1c40f
 
 .company-information
   +span-columns(12)
@@ -24,19 +25,15 @@ $employees-color: #F38034
     +span-columns(4)
     +shift(2)
 
-  +media($large-screen)
-    +span-columns(3)
-    +shift(3)
-
 .company-map
+  +clearfix
   display: none
+  overflow: hidden
+  border-radius: 50%
 
   +media($medium-screen)
     display: block
     +span-columns(4)
-
-  +media($large-screen)
-    +span-columns(3)
 
 .location-icon
   margin-left: 0
@@ -60,23 +57,22 @@ $employees-color: #F38034
 .canvas-container
   +span-columns(12)
 
+  +media($medium-screen)
+    +span-columns(8)
+
+.legend-container
+  +span-columns(12)
+
+  +media($medium-screen)
+    +span-columns(4)
+
   canvas
     margin-top: 10px
 
-.economicHistory-legend li span
-  width: 1em
-  height: 1em
-  display: inline-block
-  margin-right: 5px
-
-.economicHistory-legend
-  list-style: none
-
-.revenue-icon, .profit-icon, .employees-icon
+.revenue-icon, .profit-icon, .employees-icon, .average-result-icon
   height: 13px
   width: 13px
   display: inline-block
-  margin-left: 20px
   margin-right: 5px
   margin-top: -7px
 
@@ -88,3 +84,6 @@ $employees-color: #F38034
 
 .employees-icon
   background-color: $employees-color
+
+.average-result-icon
+  background-color: $average-result-color

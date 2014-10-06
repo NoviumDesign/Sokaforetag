@@ -13,20 +13,22 @@ block content
       .row
         .company-location
           img.location-icon(src="/public/icons/location.svg")
-          ul
+          ul.list
+            li VD: Daniel Georg Ek Lorentzon
+          ul.list
             li Humlegårdsgatan 32
             li 123 45 Stockholm
-            li Stockholms Län
+            li 08-32 46 76
         .company-map
           img.location-map(src="public/images/map.png")
 
-      .row.information-row
-        a.js-accordion-trigger(href="javascript:void(0)")
+      .row.information-row.is-expanded
+        a.js-accordion-trigger.content-is-expanded(href="javascript:void(0)")
           h6
             img.icon(src="/public/icons/executives.svg")
             | Beslutsfattare
           img.arrow(src="/public/icons/arrow.svg")
-        .accordion-content
+        .accordion-content.show-accordion
           table
             tr
               th Titel
@@ -58,45 +60,67 @@ block content
           .row
             .company-information-list
               ul.list
-                li Verksamhet: Webbportal
-                li Org. nr: 556703-7485
-                li Antal anställda: 317
-                li Omsättning:  2 995 697 t.kr.
+                li 
+                  span.header Verksamhet: 
+                  | Webbportal
+                li
+                  span.header Org. nr: 
+                  | 556703-7485
+                li
+                  span.header Antal anställda: 
+                  | 317
+                li 
+                  span.header Omsättning: 
+                  | 2 995 697 t.kr.
+                li
+                  span.header Resultat: 
+                  | -444 822 t.kr.
               ul.list
-                li Ägarförhållande: Privat, ej börsnoterat
-              ul.list
-                li Resultat efter finansnetto: -462 595 t.kr.
-                li Årets resultat: -444 822 t.kr.
-                li Summa tillgångar: 2 420 618 t.kr.
+                li 
+                  span.header Ägarförhållande: 
+                  | Privat, ej börsnoterat
             .company-information-list
               ul.list
-                li Status: Bolaget är aktivt
-                li Registreringsdatum: 2006-05-10
+                li
+                  span.header Status: 
+                  | Bolaget är aktivt
+                li
+                  span.header Registreringsdatum: 
+                  | 2006-05-10
               ul.list
-                li F-skatt status: Registrerad för F-skatt
-                li Startdatum för F-skatt: 2006-06-19
+                li 
+                  span.header F-skatt status: 
+                  | Registrerad för F-skatt
+                li
+                  span.header Startdatum för F-skatt: 
+                  | 2006-06-19
               ul.list
-                li Momsstatus: Registrerad i momsregistret
-                li Startdatum för moms: 2006-05-14
-              ul.list
-                li Länssäte: Stockholms Län
-                li Kommunsäte: Stockholm
+                li
+                  span.header Länssäte: 
+                  | Stockholms Län
+                li
+                  span.header Kommunsäte: 
+                  | Stockholm
           .row
-            h6 Ekonomisk data över 5 år
+            h6 Ekonomisk data, procentuell förändring över 3 år
             | Värden visas i procent.
+          .row
             .canvas-container
               canvas#economicHistory
-          .row
-            ul
-              li 
-                .revenue-icon
-                | Omsättning
-              li 
-                .profit-icon
-                | Resultat
-              li 
-                .employees-icon
-                | Antal anställda
+            .legend-container
+              ul
+                li 
+                  .revenue-icon
+                  | Omsättning
+                li 
+                  .profit-icon
+                  | Resultat
+                li 
+                  .employees-icon
+                  | Antal anställda
+                li 
+                  .average-result-icon
+                  | Snittresultat för hela branschen
 
       .row.information-row
         a.js-accordion-trigger(href="javascript:void(0)")
@@ -108,10 +132,10 @@ block content
           .row
             label
               input(type="checkbox" class="checkbox" name="checkboxes" value="check_1")
-              | Kreditupplysning, ev anmärkningar och kreditgräns (29kr)
+              | Kreditupplysning, ev anmärkningar och kreditgräns (75kr)
             label
               input(type="checkbox" class="checkbox" name="checkboxes" value="check_2")
-              | Årsbokslut (49kr)
+              | Årsbokslut (45kr)
             .modal
               label(for='modal-1')
                 .button.js-btn.right Beställ
@@ -119,7 +143,7 @@ block content
               .modal-window
                 .modal-inner
                   label.modal-close(for='modal-1')
-                  h2 Beställ kreditupplysning och årsredovisning
+                  h3 Beställ kreditupplysning och årsredovisning
                   .modal-content
                     .modal-row
                       table
@@ -128,17 +152,13 @@ block content
                           th Pris
                         tr
                           td Kreditupplysning
-                          td 29kr
+                          td 75kr
                         tr
                           td Årsbokslut
-                          td 49kr
+                          td 45kr
                     .modal-row
-                      .modal-dropdown
-                        label(for='select_element1') Vilket år vill du ha årsbokslut för?
-                          select.right(name='select_element1')
-                            option(value="1") Alternativ 1
-                            option(value="2") Alternativ 2
-                            option(value="3") Alternativ 3
+                      p
+                        | Kreditupplysningen är en fullständig upplysning med all information om Spotify AB (556703-7485) och med en kreditbedömning. Leverans sker inom kort.
                     .modal-row
                       h6.header
                       .row
@@ -158,3 +178,6 @@ block content
                     .modal-row
                       label(for='modal-1')
                         .button.right(for='modal-1') Beställ
+                    .modal-row
+                      p 
+                        | Vill ni ha obegränsat antal kreditupplysningar och årsredovisningar? Kontakta oss för fastpris.

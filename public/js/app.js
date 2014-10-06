@@ -12,14 +12,14 @@ $(document).ready(function(){
 /* *** Charts *** */
 
 var economicHistoryData = {
-  labels : ["År 1","År 2","År 3"],
+  labels : ["2011","2012","2013"],
   datasets : [
     {
       label: "Omsättning",
-      strokeColor : "rgba(22,160,133,1.0)",
-      pointColor : "rgba(22,160,133,1.0)",
+      strokeColor : "rgba(52, 152, 219,1.0)",
+      pointColor : "rgba(52, 152, 219,1.0)",
       pointStrokeColor : "#FFF",
-      pointHighlightFill : "rgba(22,160,133,0.75)",
+      pointHighlightFill : "rgba(52, 152, 219,0.75)",
       data : [100,120,213]
     },
     {
@@ -37,6 +37,14 @@ var economicHistoryData = {
       pointStrokeColor : "#FFF",
       pointHighlightFill : "rgba(243, 128, 52,0.75)",
       data : [100,89,65]
+    },
+    {
+      label: "Snittresultat för hela branschen",
+      strokeColor : "rgba(241, 196, 15,1.0)",
+      pointColor : "rgba(241, 196, 15,1.0)",
+      pointStrokeColor : "#FFF",
+      pointHighlightFill : "rgba(241, 196, 15,0.75)",
+      data : [100,111,124]
     }
   ]
 };
