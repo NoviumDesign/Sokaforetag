@@ -8,7 +8,31 @@ $average-result-color: #f1c40f
 
   +media($large-screen)
     +span-columns(8)
-    +shift(2)
+
+.company-related-container
+  +span-columns(12)
+  margin-bottom: 20px
+
+  +media($large-screen)
+    +span-columns(4)
+    margin-bottom: 0
+
+.company-related-header
+  border-bottom: 1px solid $base-font-color
+  margin-bottom: 20px
+  padding-bottom: 5px
+
+.company-related-content
+  +media($large-screen)
+    padding: 0
+    background-color: #FFF
+
+.company-related
+  a
+    color: $base-font-color
+
+    &:hover
+      color: $orange
 
 .company-name
   text-align: center
