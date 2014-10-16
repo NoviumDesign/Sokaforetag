@@ -5,6 +5,54 @@ block content
   include partials/_navigation
   include partials/_sub-navigation
   .container
+    .company-related-container
+      a.js-accordion-trigger.hide-for-large-up(href="javascript:void(0)")
+        h6 J63120 Webbportaler (708)
+        img.arrow(src="/public/icons/arrow.svg")
+      h4.company-related-header.show-for-large-up J63120 Webbportaler (708)
+      .company-related-content.accordion-content.show-for-large-up
+        section.company-related
+          a.show-all(href="#") Visa Alla
+        section.company-related
+          ul
+            h6 Region
+            li
+              a(href="#") Stockholm (14)
+            li
+              a(href="#") Östergötland (12)
+            li
+              a(href="#") Norrland (2)
+            li
+              a(href="#") Skåne (2)
+            li
+              a(href="#") Västergötland (1)
+        section.company-related
+          ul
+            h6 Antal anställda
+            li
+              a(href="#") 0-9 Anställda (43)
+            li
+              a(href="#") 1-4 Anställda (163)
+            li
+              a(href="#") 20-49 Anställda (215)
+        section.company-related
+          ul
+            h6 Omsättning
+            li
+              a(href="#") 0 - 99 t.kr. (23)
+            li
+              a(href="#") 100 - 199 t.kr. (87)
+            li
+              a(href="#") 200 - 499 t.kr. (12)
+            li
+              a(href="#") 500 - 999 t.kr. (19)
+        section.company-related
+          ul
+            h6 Juridisk form
+            li
+              a(href="#") Aktiebolag (122)
+            li
+              a(href="#") Handelsbolag (53)
     .company-information
       .row
         .company-name
@@ -181,24 +229,3 @@ block content
                     .modal-row
                       p 
                         | Vill ni ha obegränsat antal kreditupplysningar och årsredovisningar? Kontakta oss för fastpris.
-
-    .company-related-container
-      a.js-accordion-trigger.hide-for-large-up(href="javascript:void(0)")
-        h6 Relaterade företag
-        img.arrow(src="/public/icons/arrow.svg")
-      h4.company-related-header.show-for-large-up Relaterade företag
-      .company-related-content.accordion-content.show-for-large-up
-        section.company-related
-          ul
-            li
-              a(href="#") Relaterat företag 1 (Org. nr: 112233-4455)
-            li
-              a(href="#") Relaterat företag 2 (Org. nr: 112233-4455)
-            li
-              a(href="#") Relaterat företag 3 (Org. nr: 112233-4455)
-            li
-              a(href="#") Relaterat företag 4 (Org. nr: 112233-4455)
-            li
-              a(href="#") Relaterat företag 5 (Org. nr: 112233-4455)
-            li
-              a(href="#") Relaterat företag 6 (Org. nr: 112233-4455)
